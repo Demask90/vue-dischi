@@ -1,8 +1,8 @@
 <template>
-  <section class="container">
-    <div class="row" >
-      <div class="col-6 col-md-4 col-lg-3 mb-5">
-        <MusicCard v-for="(box, index) in MusicBox" :Key="index" :info="box"/>
+  <section class="container mx-auto">
+    <div class="row">
+      <div v-for="(box, index) in MusicBox" :Key="index" class="col-12 col-sm-4 col-md-6 col-lg-2 m-2">
+        <MusicCard  :info="box"/>
       </div>
     </div>
   </section>
