@@ -19,7 +19,7 @@ export default {
     background-color: $header-color;
 
     svg {
-      width: 4%;
+      width: 50px;
       fill: $logo-color;
     }
   }

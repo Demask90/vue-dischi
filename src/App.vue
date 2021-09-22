@@ -21,4 +21,6 @@ export default {
 <style lang="scss">
 // importo il componente general.scss per applicare a tutta la App le proprietà SCSS generali (vedi pacchetto npm bootstap)
 @import "./styles/generals.scss";
+#app {
+}
 </style>
