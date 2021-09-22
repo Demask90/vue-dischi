@@ -1,28 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header/>
+    <MusicBox/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import MusicBox from './components/MusicBox.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    MusicBox,
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+// importo il componente general.scss per applicare a tutta la App le proprietà SCSS generali (vedi pacchetto npm bootstap)
+@import "./styles/generals.scss";
 </style>
