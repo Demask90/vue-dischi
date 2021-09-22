@@ -23,5 +23,6 @@ export default {
 @import "./styles/generals.scss";
 #app {
   height: 100vh;
+  margin: 0 auto;
 }
 </style>

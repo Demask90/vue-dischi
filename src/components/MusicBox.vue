@@ -1,7 +1,7 @@
 <template>
   <section class="container mx-auto">
-    <div class="row">
-      <div v-for="(box, index) in MusicBox" :Key="index" class="col-12 col-sm-4 col-md-6 col-lg-2 m-2">
+    <div class="row d-flex justify-content-center">">
+      <div v-for="(box, index) in MusicBox" :Key="index" class="col-12 col-sm-4 col-md-3 col-lg-2 m-2">
         <MusicCard  :info="box"/>
       </div>
     </div>
