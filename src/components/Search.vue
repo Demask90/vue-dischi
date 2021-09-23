@@ -31,7 +31,6 @@ export default {
     methods: {
         resetSearch() {
             this.inputText = '';
-
             this.$emit('performSearch', this.inputText);
         }
     }

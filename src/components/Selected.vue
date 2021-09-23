@@ -21,12 +21,6 @@ export default {
         ]
       }
     },
-    methods: {
-        // GetOptions() {
-
-        // }
-    }
-
 }
 </script>
 

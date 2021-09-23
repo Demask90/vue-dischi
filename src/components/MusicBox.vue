@@ -2,7 +2,7 @@
   <section class="container mx-auto">
     <div v-if="!loading" class="row d-flex justify-content-center">
       <div class="col-12 d-flex justify-content-center m-3">
-        <!-- <Search @performSearch='GetSelected'/> -->
+        <Search @performSearch='GetSearch'/>
         <Selected @performSelect='GetSelected'/>
       </div>
       <div v-for="(box, index) in filteredList" :Key="index" class="col-12 col-sm-4 col-md-3 col-lg-2 m-2">
@@ -19,7 +19,7 @@ import axios from 'axios';
 import MusicCard from './MusicCard.vue'
 import Loader from './Loader.vue';
 import Selected from './Selected.vue'
-// import Search from './Search.vue'
+import Search from './Search.vue'
 
 export default {
   name: 'MusicBox',
@@ -27,7 +27,7 @@ export default {
     MusicCard,
     Loader,
     Selected,
-    // Search
+    Search
   },
     data() {
       return {
@@ -43,37 +43,37 @@ export default {
     },
     computed: {
 
-      // filteredList() {
-      //   if(this.selectedGenre  === '' && this.selectedArtist === '' ) {
-      //     return this.MusicBox;
-
-      //   } else if (this.selectedGenre !== '' && this.selectedArtist == '') {
-      //       return this.MusicBox.filter(item => {
-      //         return item.genre.toLowerCase().includes(this.selectedGenre.toLowerCase());
-      //     })
-          
-      //   } else if (this.selectedGenre == '' && this.selectedArtist !== '') 
-      //       return this.MusicBox.filter(item => {
-      //         return item.author.toLowerCase().includes(this.searchArtist.toLowerCase());
-      //       })
-      //   return alert("seleziona un elemento")
-
-      // },
-  
       filteredList() {
-        if (this.selectedGenre === "") {
+        if(this.selectedGenre  === '' && this.searchArtist === '' ) {
           return this.MusicBox;
-        }
 
-        let filteredList = this.MusicBox.filter( item => {
-          return item.genre
-                    .toLowerCase()
-                    .includes(this.selectedGenre.toLowerCase());
-        })
-
-        return filteredList;
+        } else if (this.selectedGenre !== '' && this.searchArtist == '') {
+            return this.MusicBox.filter(item => {
+              return item.genre.toLowerCase().includes(this.selectedGenre.toLowerCase());
+          })
+          
+        } else if (this.searchArtist !== '' && this.selectedGenre == '' ) {
+            return this.MusicBox.filter(item => {
+              return item.author.toLowerCase().includes(this.searchArtist.toLowerCase());
+            })
+        } return alert('Selezionare solo un filtro - CLICCA RESET')
       }
     },
+  
+    //   filteredList() {
+    //     if (this.selectedGenre === "") {
+    //       return this.MusicBox;
+    //     }
+
+    //     let filteredList = this.MusicBox.filter( item => {
+    //       return item.genre
+    //                 .toLowerCase()
+    //                 .includes(this.selectedGenre.toLowerCase());
+    //     })
+
+    //     return filteredList;
+    //   }
+    // },
       
       
     
@@ -90,8 +90,11 @@ export default {
       },
       GetSelected(select) {
         this.selectedGenre = select;
-        this.searchArtist = select;
+        
       },
+      GetSearch(pippo) {
+        this.searchArtist = pippo;
+      }
 
     }
 }
