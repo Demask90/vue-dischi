@@ -21,19 +21,21 @@ export default {
 
 .card {
     width: 100%;
+    height: 350px;
     background-color: $card-color;
     padding: 20px;
 
     img {
-        width: 100%;
-        height: 100%;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
 
     }
     h3{ 
         padding: 5px;
         color:$title-color;
         text-transform: uppercase;
-        font-size: 1.4em;
+        font-size: 1.3em;
     }
     h4{
         color: $info-color;

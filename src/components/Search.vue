@@ -1,5 +1,5 @@
 <template>
-  <form class="d-flex my-5">
+  <form class="d-flex">
 
     <div class="flex-grow-1">
         <input type="text" class="form-control" placeholder="Search Author" v-model='inputText'>

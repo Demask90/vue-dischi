@@ -25,7 +25,7 @@ export default {
 @import "./styles/generals.scss";
 #app {
   background-color: $main-background;
-  height: 200vh;
+  height: 100vh;
   margin: 0 auto;
 }
 </style>
