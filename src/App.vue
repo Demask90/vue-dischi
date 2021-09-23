@@ -6,15 +6,17 @@
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import MusicBox from './components/MusicBox.vue'
+import Header from './components/Header.vue';
+import MusicBox from './components/MusicBox.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
     MusicBox,
-  }
+    
+  },
+  
 }
 </script>
 
@@ -22,7 +24,8 @@ export default {
 // importo il componente general.scss per applicare a tutta la App le proprietà SCSS generali (vedi pacchetto npm bootstap)
 @import "./styles/generals.scss";
 #app {
-  height: 100vh;
+  background-color: $main-background;
+  height: 200vh;
   margin: 0 auto;
 }
 </style>

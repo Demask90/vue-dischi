@@ -37,6 +37,7 @@ export default {
     }
     h4{
         color: $info-color;
+        font-size: 1.1em;
     }
 }
     
