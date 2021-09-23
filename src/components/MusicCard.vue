@@ -33,11 +33,10 @@ export default {
         padding: 5px;
         color:$title-color;
         text-transform: uppercase;
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
     h4{
-        color: $color-info;
-        font-size: 1.1em;
+        color: $info-color;
     }
 }
     
